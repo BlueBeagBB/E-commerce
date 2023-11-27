@@ -1,15 +1,25 @@
+*{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
 html {
     width: auto;
     height: auto;
-    max-height: 8rem;
+
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4.6rem;
+    width: 100%;
     background-color: #001F3F;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000; /* Isso coloca o navbar sobre outros elementos, se necessário */
 }
 
 header h2 {
@@ -52,6 +62,10 @@ section {
     color: black;
 }
 
+
+
+
+
 .carousel {
     margin-right: 2rem;
     margin-top: 2rem;
@@ -77,6 +91,11 @@ section.home-bottom {
     max-width: 220px;
 }
 
+.card-body,
+.card-text p{
+    margin-bottom: 0;
+}
+
 .cards {
     display: flex;
     margin-left: 1.5rem;
@@ -91,6 +110,7 @@ section .imagens ul {
 }
 
 .imagens {
+    margin-bottom: 5rem;
     display: flex;
     align-items: center;
     margin-left: 2.6rem;
@@ -117,19 +137,10 @@ button#btnBusca {
     border-radius: 20px;
 }
 
-*{
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-}
-
-
-
-
-
 
 
 section {
     display: flex;
-    margin-top: 5rem;
 }
 
 section .text {
@@ -138,7 +149,8 @@ section .text {
 }
 
 section .text p{
-    margin-top: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 2.2rem;
 }
 
 section .comp {
@@ -147,6 +159,7 @@ section .comp {
 }
 
 section .comp p {
+    margin-top: 1rem;
     font-weight: 800;
     letter-spacing: 2px;
     font-size: 20px;
@@ -154,6 +167,7 @@ section .comp p {
 
 section .comp button {
     font-size: 20px;
+    height: 100%;
     border: none;
     color: white;
     background-color: black;
@@ -202,20 +216,6 @@ section.Produtos {
     margin-left: 2rem;
 }
 
-.header-bottom ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    list-style: none;
-    border-bottom: 1px solid #001f3f35;
-    padding: 12px;
-}
-
-.header-bottom a{
-    text-decoration: none;
-    color: black;
-}
-
 input#txtBusca {
     padding: 8px;
     border-radius: 20px;
@@ -225,71 +225,6 @@ input#txtBusca {
 button#btnBusca {
     padding: 8px;
     border-radius: 20px;
-}
-
-
-
-
-
-
-
-*{
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-}
-
-html {
-    width: auto;
-    height: auto;
-    max-height: 8rem;
-}
-
-header {
-    background-color: #001F3F;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h2 {
-    color: white;
-    font-size: 2rem;
-    margin-left: 5rem; 
-}
-
-header ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none
-}
-
-header a {
-    color: white;
-    margin-left: 60px;
-    text-decoration: none;
-}
-
-header #divBusca {
-    margin-right: 5rem;
-}
-
-body {
-    display: block;
-    margin: 0px;
-}
-
-.header-bottom ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    list-style: none;
-    border-bottom: 1px solid #001f3f35;
-    padding: 12px;
-}
-
-.header-bottom a{
-    text-decoration: none;
-    color: black;
 }
 
 .form h2 {
@@ -315,7 +250,9 @@ form {
     margin-left: 35%;
 }
 
-form input, form textarea {
+form .interface input,
+form .interface button,
+ form .interface textarea {
     margin-bottom: 1.5rem;
     width: 100%;
     background-color: #001F3F;
@@ -337,21 +274,22 @@ form input::placeholder {
     color: #86868b;
 }
 
-form .btn-enviar {
+form .interface{
     margin-top: 20px;
     text-align: center;
 }
 
-form .btn-enviar input {
-    width: 120px;
+form .interface button {
+    margin-left: 3rem;
+    width: 20rem;
     font-weight: 700px;
     color: white;
     cursor: pointer;
 }
 
-form .btn-enviar input:hover {
-        box-shadow: 0px 0px 8px rgb(236, 166, 35);
-        transform: scale(1.1);
+form .interface button:hover {
+        box-shadow: 0px 0px 8px rgb(48, 35, 236);
+        transform: scale(1.03);
         transition: 0.3s all;
      }
 
